@@ -39,9 +39,9 @@ public:
 
     DkaCreator(string alphabet, const string& substr, int k, string filename) {
         if (alphabet.length() == 0)
-            throw runtime_error("DKA is obvious, add symbols in alphabet");
+            throw runtime_error("Alphabet is empty. Add symbols into it");
         if (k < 1)
-            throw runtime_error("You're dumb, k < 1, really? :D");
+            throw runtime_error("k should be >= 1");
         _filename = filename;
         if (_filename.find(".jpg", 0) == string::npos)
             _filename += ".jpg";
